@@ -12,8 +12,8 @@ class GestorDeTareas:
             with open(self.archivo, "r", encoding="utf-8") as f:
                 try:
                     return json.load(f)
-                except json.JSONDecodeError:
-                    return []  # ⚠️ SonarCloud detecta "except sin tipo"
+                except:
+                    return [] 
         return []
 
     def guardar_tareas(self):
