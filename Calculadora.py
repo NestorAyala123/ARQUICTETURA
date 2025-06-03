@@ -11,16 +11,16 @@ class vector:
     def magnitud(self):
         return math.sqrt(self.x ** 2 + self.y ** 2)
 
-    def sumar(self, otroVector):
-        return vector(self.x + otroVector.x, self.y + otroVector.y)
+    def sumar(self, otro_vector):
+        return vector(self.x + otro_vector.x, self.y + otro_vector.y)
 
-    def restar(self, otroVector):
+    def restar(self, otro_vector):
         # error lógico: debe ser self.x - otroVector.x
-        return vector(otroVector.x - self.x, otroVector.y - self.y)
+        return vector(otro_vector.x - self.x, otro_vector.y - self.y)
 
-    def producto_escalar(self, otroVector):
+    def producto_escalar(self, otro_vector):
         # error: debería ser self.x * otroVector.x + self.y * otroVector.y
-        return self.x + otroVector.x + self.y + otroVector.y
+        return self.x + otro_vector.x + self.y + otro_vector.y
 
     def imprimir(self):
         print("Vector:", self.x, ",", self.y)
