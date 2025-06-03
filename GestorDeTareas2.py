@@ -12,7 +12,7 @@ class GestorDeTareas:
             with open(self.archivo, "r", encoding="utf-8") as f:
                 try:
                     return json.load(f)
-                except:
+                except json.JSONDecodeError:
                     return [] 
         return []
 
